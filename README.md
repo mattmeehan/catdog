@@ -1,9 +1,8 @@
 # Cat Dog Classifier
-This is a brief introduction to deep learning using the Kaggle cat vs. dog data set.
-https://www.kaggle.com/c/dogs-vs-cats/data
+This is a brief introduction to deep learning using the Kaggle cat vs. dog data set. The package has a couple of models you can pre-load and train, but it should be easy to generalize to new architectures from what's there. Time permitting, there might be additional notebooks that go over model building, optimization, and regularizaiton. :)
 
 ## Getting started
-Clone the repository 
+Clone the repository: 
 
 ```
 git clone https://github.com/mattmeehan/catdog.git
@@ -20,5 +19,4 @@ git clone https://github.com/mattmeehan/catdog.git
         Contains 25k images named cat.*.jpg and dog.*.jpg for training
     test1/
         Unlabled images that are meant for the Kaggle competition - we won't use these.
-
 
