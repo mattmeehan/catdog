@@ -7,12 +7,6 @@ from tensorflow.keras.layers import (Dense, Dropout, Activation,
         Flatten, Conv2D, MaxPooling2D, LeakyReLU)
 
 
-def load_cnn(weights='/Users/matt/projects/catdog/cnn_deep_trained.h5', size=50):
-    model = models.build_cnn(size)
-    model.load_weights(weights)
-    return model
-
-
 def build_feed_forward_nn(img_size):
     """Build a simple feed-forward neural network.
 
