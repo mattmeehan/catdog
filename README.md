@@ -1,5 +1,5 @@
 # Cat Dog Classifier
-This is package contains modules for building a convolutional neural network-based cat classifier that I wrote for an intro to neural networks and CNNs talk. The package has a couple of models you can pre-load and train, and it should be straight-forward to generalize to new architectures from what's there. Time permitting, there might be additional notebooks that go over model building, optimization, and regularizaiton. :)
+This package contains modules for building a convolutional neural network cat classifier that I wrote for an intro to neural networks and CNNs talk. The package has a couple of models you can pre-load and train and it should be straight-forward to generalize to new architectures from what's there. Time permitting, there might be additional notebooks that go over model building, optimization, and regularizaiton. :)
 
 ## Getting started
 1. Clone the repository: 
