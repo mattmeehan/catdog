@@ -1,4 +1,5 @@
 
+from __future__ import division, print_function
 import os
 import glob
 import numpy as np
@@ -6,8 +7,8 @@ from skimage import io
 from skimage.transform import resize
 
 
-TRAIN_DIR = '../train/'
-TEST_DIR = '../test1/'
+TRAIN_DIR = './train/'
+TEST_DIR = './test1/'
 
 
 def load_image(img_path, size=50):
@@ -33,7 +34,7 @@ def load_image(img_path, size=50):
     return img
 
 
-def load_training_images(n_images=500, size=50):
+def load_training_images(n_images=2000, size=50):
     """Load training images and create one-hot encoded labels for each image.
 
     Parameters
@@ -53,7 +54,13 @@ def load_training_images(n_images=500, size=50):
     
     data = []
     labels = []
-    
+  
+    assert os.path.exists(TRAIN_DIR), f'Training image directory {TRAIN_DIR} does not exist.'
+
+    if n_images > 12500:
+        print('Requested more than the 12500 available training images of each type. Loading all images.')
+        n_images = 12500
+
     for img_path in glob.glob(os.path.join(TRAIN_DIR, 'cat*.jpg'))[:n_images]:
         data.append(load_image(img_path, size=size))
         labels.append(np.array([1,0]))
