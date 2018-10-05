@@ -15,8 +15,10 @@ git clone https://github.com/mattmeehan/catdog.git
    Be aware that the data set is ~900 GB!
 
 3. Unzip the compressed data files, which will give you two directories:
+    
     train/
         Contains 25k images named cat.\*.jpg and dog.\*.jpg for training
+    
     test1/
         Unlabled images that are meant for the Kaggle competition - we won't use these.
 
