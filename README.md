@@ -1,12 +1,22 @@
 # Cat Dog Classifier
-This is a brief introduction to deep learning using the Kaggle cat vs. dog data set. The package has a couple of models you can pre-load and train, but it should be easy to generalize to new architectures from what's there. Time permitting, there might be additional notebooks that go over model building, optimization, and regularizaiton. :)
+This is package contains modules for building a convolutional neural network-based cat classifier that I wrote for an intro to neural networks and CNNs talk. The package has a couple of models you can pre-load and train, and it should be straight-forward to generalize to new architectures from what's there. Time permitting, there might be additional notebooks that go over model building, optimization, and regularizaiton. :)
 
 ## Getting started
-Clone the repository: 
+1. Clone the repository: 
 
 ```
 git clone https://github.com/mattmeehan/catdog.git
 ```
+
+2. Install the requirements
+
+```
+pip install requirements.txt
+```
+
+3. Download the data (see below)
+
+4. You're good to go! ```cat_classifier.ipynb``` should get you started.
 
 ## Getting the data
 1. Make a Kaggle account so that you're able to access the data. You need to agree to particular terms to gain access to the data. 
