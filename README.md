@@ -16,7 +16,7 @@ git clone https://github.com/mattmeehan/catdog.git
 
 3. Unzip the compressed data files, which will give you two directories:
     train/
-        Contains 25k images named cat.*.jpg and dog.*.jpg for training
+        Contains 25k images named cat.\*.jpg and dog.\*.jpg for training
     test1/
         Unlabled images that are meant for the Kaggle competition - we won't use these.
 
