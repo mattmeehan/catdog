@@ -1,9 +1,16 @@
 
+from __future__ import division, print_function
 import tensorflow.keras as keras
 from tensorflow.keras import Sequential
 from tensorflow.keras.optimizers import SGD
 from tensorflow.keras.layers import (Dense, Dropout, Activation, 
         Flatten, Conv2D, MaxPooling2D, LeakyReLU)
+
+
+def load_cnn(weights='/Users/matt/projects/catdog/cnn_deep_trained.h5', size=50):
+    model = models.build_cnn(size)
+    model.load_weights(weights)
+    return model
 
 
 def build_feed_forward_nn(img_size):
@@ -70,6 +77,18 @@ def build_cnn(img_size):
     model.add(Conv2D(128, (3, 3), padding='same'))
     model.add(LeakyReLU(alpha=0.3))
     model.add(Conv2D(128, (3, 3), padding='same'))
+    model.add(LeakyReLU(alpha=0.3))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+    model.add(Dropout(0.2))
+    
+    model.add(Conv2D(64, (3, 3), padding='same'))
+    model.add(LeakyReLU(alpha=0.3))
+    model.add(Conv2D(64, (3, 3), padding='same'))
+    model.add(LeakyReLU(alpha=0.3))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+    model.add(Dropout(0.2))
+    
+    model.add(Conv2D(32, (3, 3), padding='same', input_shape=(img_size,img_size,1)))
     model.add(LeakyReLU(alpha=0.3))
     model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(Dropout(0.2))
