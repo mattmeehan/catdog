@@ -7,8 +7,11 @@ from skimage import io
 from skimage.transform import resize
 
 
+# TRAIN_DIR and TEST_DIR contain raw jpg images from kaggle
 TRAIN_DIR = './train/'
 TEST_DIR = './test1/'
+# DATA_DIR contains 4000 resized, grayscale images saved as npy files
+DATA_DIR = './train_data/'
 
 
 def load_image(img_path, size=50):
@@ -78,3 +81,29 @@ def load_training_images(n_images=2000, size=50):
     
     return data, labels
 
+
+def load_resized_images(image_dir=DATA_DIR):
+    """Load 4000 50x50 grayscale training images and associated labels.
+
+    Parameters
+    ----------
+    image_dir : str
+        Directory containing resized images and labels
+
+    Returns
+    -------
+    data : np.ndarray, shape=(4000, size, size)
+        Array of 50x50 grayscale training images (2000 of each type)
+    labels : np.ndarray, shaep=(4000, 2)
+        Array of one-hot encoded labels, e.g. [1,0] == cat
+    """
+
+    data_path = os.path.join(image_dir, 'training_data.npy')
+    labels_path = os.path.join(image_dir, 'training_labels.npy')
+    assert os.path.exists(data_path), f'{data_path} does not exist'
+    assert os.path.exists(labels_path), f'{labels_path} does not exist'
+
+    data = np.load(data_path)
+    labels = np.load(labels_path)
+
+    return data, labels
