@@ -16,7 +16,7 @@ git clone https://github.com/mattmeehan/catdog.git
 pip install -r requirements.txt
 ```
 
-3. Package comes with 4000 pre-processed 50z50 grayscale images in ```./train_data/```. If you'd like to have more images, change the size, or train a model that utilizes all three color channels, see "Getting the data" below.
+3. Package comes with 4000 pre-processed 50x50 grayscale images in ```./train_data/```. If you'd like to have more images, change the size, or train a model that utilizes all three color channels, see "Getting the data" below.
 
 4. You're good to go! ```cat_classifier.ipynb``` should get you started.
 
