@@ -24,7 +24,7 @@ pip install -r requirements.txt
 1. Make a Kaggle account so that you're able to access the data. You need to agree to particular terms to gain access to the data. 
 
 2. Download data from https://www.kaggle.com/c/dogs-vs-cats
-   Be aware that the data set is ~900 GB!
+   Be aware that the data set is ~900 MB!
 
 3. Unzip the compressed data files, which will give you two directories:
     
